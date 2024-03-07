@@ -13,8 +13,17 @@ $(document).ready(function(){
             $('.scroll-up-btn').removeClass("show");
         }
     });
-
    
+
+    $(document).ready(function() {
+        $('#submitButton').click(function(event) {
+            event.preventDefault();
+            alert("Submitted successfully!");
+            $('.right form input, .right form textarea').val('');
+        });
+    });
+
+
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
         $('html').css("scrollBehavior", "auto");
